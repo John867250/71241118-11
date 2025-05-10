@@ -1,0 +1,20 @@
+def hitung_rata_rata():
+    data = []
+    while True:
+        inp = input("Masukkan angka atau 'done' untuk selesai: ")
+        if inp.lower() == "done":
+            break
+        try:
+            angka = float(inp)
+            data.append(angka)
+        except ValueError:
+            print("Input tidak valid.")
+    
+    if data:
+        rata2 = sum(data) / len(data)
+        print("Rata-rata:", rata2)
+    else:
+        print("Tidak ada data yang dimasukkan.")
+
+# Panggil fungsi
+hitung_rata_rata()
