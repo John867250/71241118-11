@@ -1,0 +1,10 @@
+def Tiga_bilangan_Terbaik(data):
+    if len(data) < 3:
+        raise ValueError("List harus memiliki minimal 3 elemen.")
+    unik = list(set(data))
+    unik.sort(reverse=True)
+    return unik[:3]
+
+angka = [40, 50, 20, 90, 90, 70, 60]
+hasil = Tiga_bilangan_Terbaik(angka)
+print("Tiga bilangan terbaik:", hasil)
