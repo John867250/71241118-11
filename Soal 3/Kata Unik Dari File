@@ -1,0 +1,14 @@
+def kata_unik(nama_file):
+    try:
+        with open(nama_file, 'r', encoding='utf-8') as file:
+            isi = file.read().lower()
+            isi = isi.replace('\n', ' ').replace('.', '').replace(',', '')
+            kata = isi.split()
+            unik = set(kata)
+            print("Kata unik dalam file:")
+            for k in sorted(unik):
+                print(k)
+    except FileNotFoundError:
+        print("File tidak ditemukan.")
+
+kata_unik("artikel.txt")
